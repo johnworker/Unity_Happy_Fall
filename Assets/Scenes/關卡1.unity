@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 705816898}
   - component: {fileID: 705816897}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Gift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,8 +590,8 @@ GameObject:
   - component: {fileID: 2109156018}
   - component: {fileID: 2109156020}
   - component: {fileID: 2109156019}
-  - component: {fileID: 2109156022}
   - component: {fileID: 2109156021}
+  - component: {fileID: 2109156022}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -678,8 +678,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &2109156022
-CircleCollider2D:
+--- !u!61 &2109156022
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -692,5 +692,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 100, y: 100}
+  m_EdgeRadius: 0
