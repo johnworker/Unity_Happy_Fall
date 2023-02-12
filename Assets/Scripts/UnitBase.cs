@@ -24,7 +24,10 @@ namespace monster
                 else if (collision.gameObject.name == "Head")
                 {
                     // Vector2 v = m_Rigidbody.velocity;
-                    float v = m_Rigidbody.velocity.magnitude;
+                    // 取得速度的幅度
+                    float magn = m_Rigidbody.velocity.magnitude;
+                    // 取得速度的單位向量
+                    Vector2 v = m_Rigidbody.velocity.normalized;
                 }
             }
         }
