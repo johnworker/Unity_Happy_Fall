@@ -14,7 +14,19 @@ namespace monster
 
         private void OnCollisionEnter(Collision collision)
         {
-            PlayerControl pc = collision.gameObject.transform.parent.GetComponent<PlayerControl>();
+            PlayerControl pc = collision.transform.parent.GetComponent<PlayerControl>();
+            if (pc != null)
+            {
+                if(collision.gameObject.name == "Bag")
+                {
+
+                }
+                else if (collision.gameObject.name == "Head")
+                {
+                    // Vector2 v = m_Rigidbody.velocity;
+                    float v = m_Rigidbody.velocity.magnitude;
+                }
+            }
         }
     }
 
