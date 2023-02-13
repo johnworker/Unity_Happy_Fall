@@ -6,13 +6,19 @@ namespace monster
 {
     public class PlayerControl : MonoBehaviour
     {
-        // Start is called before the first frame update
+
+        public int m_ScoreValue = 0;
+
         void Start()
         {
 
         }
 
-        // Update is called once per frame
+        public void AddScore(int add)
+        {
+            m_ScoreValue += add;
+        }
+
         void Update()
         {
             if (Input.GetKey(KeyCode.LeftArrow))
