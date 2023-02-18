@@ -15,6 +15,10 @@ namespace monster
         public TextMeshProUGUI m_Score = null;
         public TextMeshProUGUI m_Time = null;
 
+        public Transform m_BagObj = null;
+
+        private bool m_IsGameOver = false;
+
         void Start()
         {
             Refresh();
@@ -22,20 +26,34 @@ namespace monster
 
         void Update()
         {
+            if (m_IsGameOver)
+            {
+                return;
+            }
+
             m_TimeValue += Time.deltaTime;
             m_Time.text = "®É¶¡" + m_TimeValue.ToString("0.0");
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.localPosition += new Vector3(-300, 0, 0) * Time.deltaTime;
+                m_BagObj.localPosition = new Vector3(-100, 30, 0);
             }
 
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.localPosition += new Vector3(300, 0, 0) * Time.deltaTime;
+                m_BagObj.localPosition = new Vector3(100, 30, 0);
             }
 
         }
+
+        public void Die()
+        {
+            Time.timeScale = 0;
+            m_IsGameOver = true;
+        }
+
 
         public void AddScore(int add)
         {

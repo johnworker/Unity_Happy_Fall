@@ -1,37 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 namespace monster
 {
-    public class UnitBase : MonoBehaviour
+    public class BombUnit : UnitBase
     {
-        public TextMeshProUGUI m_ScaleText = null;
-        public Rigidbody m_Rigidbody = null;
 
-        private int m_ScaleValue = 1;
-        public int m_ScoreBase = 1;
-
-        private void Start()
-        {
-            RefreshScale();
-        }
-
-        private void RefreshScale()
-        {
-            m_ScaleText.text = "x" + m_ScaleValue;
-        }
-
-        public virtual void OnCollisionEnter(Collision collision)
+        public override void OnCollisionEnter(Collision collision)
         {
             PlayerControl pc = collision.transform.parent.GetComponent<PlayerControl>();
             if (pc != null)
             {
-                if(collision.gameObject.name == "Bag")
+                if (collision.gameObject.name == "Bag")
                 {
-                    pc.AddScore(m_ScoreBase * m_ScaleValue);
+                    pc.Die();
                     Destroy(gameObject);
                 }
                 else if (collision.gameObject.name == "Head")
@@ -43,11 +26,9 @@ namespace monster
                     // 取得速度的單位向量
                     Vector3 v = m_Rigidbody.velocity.normalized;
                     m_Rigidbody.velocity = v * 50;
-                    m_ScaleValue++;
-                    RefreshScale();
                 }
             }
         }
-    }
 
+    }
 }
