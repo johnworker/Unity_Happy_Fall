@@ -34,18 +34,23 @@ namespace monster
             m_TimeValue += Time.deltaTime;
             m_Time.text = "®É¶¡" + m_TimeValue.ToString("0.0");
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) && transform.localPosition.x > -375)
             {
-                transform.localPosition += new Vector3(-300, 0, 0) * Time.deltaTime;
+                transform.localPosition += new Vector3(-500, 0, 0) * Time.deltaTime;
                 m_BagObj.localPosition = new Vector3(-100, 30, 0);
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) && transform.localPosition.x < 375)
             {
-                transform.localPosition += new Vector3(300, 0, 0) * Time.deltaTime;
+                transform.localPosition += new Vector3(500, 0, 0) * Time.deltaTime;
                 m_BagObj.localPosition = new Vector3(100, 30, 0);
             }
 
+        }
+
+        public float GetNowTime()
+        {
+            return m_TimeValue;
         }
 
         public void Die()

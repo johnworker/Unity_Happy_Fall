@@ -170,7 +170,16 @@ MonoBehaviour:
   m_Clone:
   - {fileID: 705816901}
   - {fileID: 1508131389}
+  - {fileID: 1881396389}
+  - {fileID: 984304786}
+  - {fileID: 969365207}
+  - {fileID: 607304550}
+  - {fileID: 878934544}
+  - {fileID: 2131754993}
+  - {fileID: 1117135523}
+  - {fileID: 862706200}
   m_FruitNode: {fileID: 1675873124}
+  m_Player: {fileID: 2004605301}
 --- !u!1 &78895641
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &86222062
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1211,7 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 616749206}
   m_Rigidbody: {fileID: 607304551}
-  m_ScoreBase: 1
+  m_ScoreBase: 5
 --- !u!54 &607304551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1594,7 +1603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 159503200}
   m_Rigidbody: {fileID: 862706201}
-  m_ScoreBase: 1
+  m_ScoreBase: 9
 --- !u!54 &862706201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1718,7 +1727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 911249763}
   m_Rigidbody: {fileID: 878934545}
-  m_ScoreBase: 1
+  m_ScoreBase: 6
 --- !u!54 &878934545
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1977,7 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 375123228}
   m_Rigidbody: {fileID: 969365208}
-  m_ScoreBase: 1
+  m_ScoreBase: 4
 --- !u!54 &969365208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2101,7 +2110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 192098051}
   m_Rigidbody: {fileID: 984304787}
-  m_ScoreBase: 1
+  m_ScoreBase: 3
 --- !u!54 &984304787
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2225,7 +2234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 1445780650}
   m_Rigidbody: {fileID: 1117135524}
-  m_ScoreBase: 1
+  m_ScoreBase: 8
 --- !u!54 &1117135524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3182,7 +3191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 1934710244}
   m_Rigidbody: {fileID: 1881396390}
-  m_ScoreBase: 1
+  m_ScoreBase: 2
 --- !u!54 &1881396390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3718,7 +3727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ScaleText: {fileID: 2086505861}
   m_Rigidbody: {fileID: 2131754994}
-  m_ScoreBase: 1
+  m_ScoreBase: 7
 --- !u!54 &2131754994
 Rigidbody:
   m_ObjectHideFlags: 0
