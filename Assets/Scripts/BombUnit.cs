@@ -6,6 +6,10 @@ namespace monster
 {
     public class BombUnit : UnitBase
     {
+        private void Awake()
+        {
+            m_ScaleText.gameObject.SetActive(false);
+        }
 
         public override void OnCollisionEnter(Collision collision)
         {

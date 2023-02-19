@@ -6,7 +6,7 @@ namespace monster
 {
     public class GiftManager : MonoBehaviour
     {
-        public UnitBase m_Clone = null;
+        public UnitBase[] m_Clone = null;
 
         public Transform m_FruitNode = null;
 
@@ -28,8 +28,19 @@ namespace monster
 
         private void CreateFruit()
         {
-            UnitBase unit = Instantiate<UnitBase>(m_Clone, m_FruitNode);
-            unit.transform.localPosition = new Vector3(Random.Range(-450f, 450f), 550f, 0);
+            int r = Random.Range(0, 10); // 0-9
+            UnitBase unit = null;
+            if(r < 1)
+            {
+                unit = m_Clone[1];
+            }
+            else
+            {
+                unit = m_Clone[0];
+            }
+
+            UnitBase createUnit = Instantiate<UnitBase>(unit, m_FruitNode);
+            createUnit.transform.localPosition = new Vector3(Random.Range(-450f, 450f), 550f, 0);
         }
     }
 
